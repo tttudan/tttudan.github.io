@@ -90,18 +90,18 @@
 
 
 
-<meta name="description" content="###Ajax介绍:   Asynchronous JavaScript and XML(异步的 JavaScript 和 XML);        Ajax技术能够向服务器请求额外的数据而无需卸载页面    Ajax技术核心是XMLHttpRequest对象    检测XHR对象的readyState属性, 该属性表示请求/响应过程的当前活动阶段.这个属性可以取值: 0: 未初始化.尚未调用op">
+<meta name="description" content="Ajax介绍: Asynchronous JavaScript and XML(异步的 JavaScript 和 XML);     Ajax技术能够向服务器请求额外的数据而无需卸载页面 Ajax技术核心是XMLHttpRequest对象 检测XHR对象的readyState属性, 该属性表示请求/响应过程的当前活动阶段.这个属性可以取值: 0: 未初始化.尚未调用open()方法 1: 启动.">
 <meta name="keywords" content="AJAX">
 <meta property="og:type" content="article">
 <meta property="og:title" content="AJAX">
 <meta property="og:url" content="http://yoursite.com/2017/06/28/AJAX/index.html">
 <meta property="og:site_name" content="Hello, tudan~">
-<meta property="og:description" content="###Ajax介绍:   Asynchronous JavaScript and XML(异步的 JavaScript 和 XML);        Ajax技术能够向服务器请求额外的数据而无需卸载页面    Ajax技术核心是XMLHttpRequest对象    检测XHR对象的readyState属性, 该属性表示请求/响应过程的当前活动阶段.这个属性可以取值: 0: 未初始化.尚未调用op">
+<meta property="og:description" content="Ajax介绍: Asynchronous JavaScript and XML(异步的 JavaScript 和 XML);     Ajax技术能够向服务器请求额外的数据而无需卸载页面 Ajax技术核心是XMLHttpRequest对象 检测XHR对象的readyState属性, 该属性表示请求/响应过程的当前活动阶段.这个属性可以取值: 0: 未初始化.尚未调用open()方法 1: 启动.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-03-28T07:28:32.988Z">
+<meta property="og:updated_time" content="2019-07-04T10:53:03.073Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AJAX">
-<meta name="twitter:description" content="###Ajax介绍:   Asynchronous JavaScript and XML(异步的 JavaScript 和 XML);        Ajax技术能够向服务器请求额外的数据而无需卸载页面    Ajax技术核心是XMLHttpRequest对象    检测XHR对象的readyState属性, 该属性表示请求/响应过程的当前活动阶段.这个属性可以取值: 0: 未初始化.尚未调用op">
+<meta name="twitter:description" content="Ajax介绍: Asynchronous JavaScript and XML(异步的 JavaScript 和 XML);     Ajax技术能够向服务器请求额外的数据而无需卸载页面 Ajax技术核心是XMLHttpRequest对象 检测XHR对象的readyState属性, 该属性表示请求/响应过程的当前活动阶段.这个属性可以取值: 0: 未初始化.尚未调用open()方法 1: 启动.">
 
 
 
@@ -356,21 +356,10 @@
       
 
       
-        <p>###Ajax介绍:</p>
-<ul>
-<li><ol>
+        <h3 id="Ajax介绍"><a href="#Ajax介绍" class="headerlink" title="Ajax介绍:"></a>Ajax介绍:</h3><ol>
 <li>Asynchronous JavaScript and XML(异步的 JavaScript 和 XML);    </li>
-</ol>
-</li>
-<li><ol>
 <li>Ajax技术能够向服务器请求额外的数据而无需卸载页面</li>
-</ol>
-</li>
-<li><ol>
 <li>Ajax技术核心是XMLHttpRequest对象</li>
-</ol>
-</li>
-<li><ol>
 <li>检测XHR对象的readyState属性, 该属性表示请求/响应过程的当前活动阶段.这个属性可以取值:<ul>
 <li>0: 未初始化.尚未调用open()方法</li>
 <li>1: 启动. 已经调用open()方法, 但尚未调用send()方法</li>
@@ -379,19 +368,10 @@
 <li>4: 完成. 已经接受到全部响应数据, 而且已经可以在客户端使用了</li>
 </ul>
 </li>
-</ol>
-<ul>
-<li><ol>
-<li>请求方式<br>GET请求是最常见的请求类型, 最常用于向服务器查询信息.<br>POST通常用于向服务器发送应该被保存的数据</li>
-</ol>
+<li><p>请求方式<br>  GET请求是最常见的请求类型, 最常用于向服务器查询信息.<br>  POST通常用于向服务器发送应该被保存的数据</p>
+<h3 id="使用ajax请求数据的过程"><a href="#使用ajax请求数据的过程" class="headerlink" title="使用ajax请求数据的过程"></a>使用ajax请求数据的过程</h3><p>Ajax : 发送异步请求,更新页面局部内容</p>
 </li>
-</ul>
-<p>###使用ajax请求数据的过程          </p>
-<ul>
-<li>Ajax : 发送异步请求,更新页面局部内容</li>
-</ul>
-</li>
-</ul>
+</ol>
 <ul>
 <li><p>创建对象 new XMLHttpRequest() ;  //考虑兼容性</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var xhr = null;</span><br><span class="line">if(window.XMLHttpRequest) &#123; //主流浏览器 (包括IE7、以后的版本)</span><br><span class="line">    xhr = new XMLHttpRequest();</span><br><span class="line"> &#125;else &#123; //IE6、 IE5</span><br><span class="line">   xhr = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
@@ -406,7 +386,7 @@
 <li>jquery 中 的ajax<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$.ajax(&#123;</span><br><span class="line">     url : &apos; &apos;, //请求地址</span><br><span class="line">     type: &apos; &apos;, // 请求方式(get; post)</span><br><span class="line">     dataType : &apos; &apos;, // 返回值类型(json; XML)</span><br><span class="line">     data :&#123;&#125;, // 请求参数</span><br><span class="line">     success: function(value) &#123; // 成功的会调函数</span><br><span class="line">         console.log(value);</span><br><span class="line">     &#125;,</span><br><span class="line">     error: function(err) &#123; // 失败的回调函数</span><br><span class="line">         console.log(err);</span><br><span class="line">     &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<p>###跨域问题<br> 1.跨域<br>   协议,子域名,主域名,端口 有一个不同 说明跨域 不同源<br>   ajax会出现跨域的原因 : js安全因素,禁止跨域(同源策略)</p>
+<h3 id="跨域问题"><a href="#跨域问题" class="headerlink" title="跨域问题"></a>跨域问题</h3><p> 1.跨域<br>   协议,子域名,主域名,端口 有一个不同 说明跨域 不同源<br>   ajax会出现跨域的原因 : js安全因素,禁止跨域(同源策略)</p>
 <p> 2.解决跨域的问题<br>   1&gt;.代理 (依靠服务器处理)<br>   2&gt;.jsonp<br>   3&gt;.html5</p>
 
       
@@ -502,8 +482,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -522,7 +511,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -535,7 +524,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -569,6 +558,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Ajax介绍"><span class="nav-number">1.</span> <span class="nav-text">Ajax介绍:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用ajax请求数据的过程"><span class="nav-number">2.</span> <span class="nav-text">使用ajax请求数据的过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#跨域问题"><span class="nav-number">3.</span> <span class="nav-text">跨域问题</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -582,7 +587,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2018</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <!-- <i class="fa fa-user"></i> -->
     <i class="fa fa-star"></i>

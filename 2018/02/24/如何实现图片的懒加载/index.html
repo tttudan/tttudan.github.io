@@ -90,16 +90,17 @@
 
 
 
-<meta name="description" content="前端小萌新 | 处女座 | 16岁少女">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hello, tudan~">
-<meta property="og:url" content="http://yoursite.com/archives/2017/07/index.html">
+<meta name="description" content="懒加载的意义:  图片对页面加载的速度影响很大, 一张图片的大小可以达到几M, 而代码可能只有几十KB. 当页面图片很多时, 页面加载的速度缓慢, 这样就会失去很多用户.所以, 对于图片比较多的页面, 为了加快页面的加载速度, 很多时候可以将页面中未出现在可视区域的图片先不加载, 等滚动到可视区域后再去加载. 这样对于加载性能上会有很大的提升, 也提高了用户体验.  懒加载的原理:  将页面中的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何实现图片的懒加载">
+<meta property="og:url" content="http://yoursite.com/2018/02/24/如何实现图片的懒加载/index.html">
 <meta property="og:site_name" content="Hello, tudan~">
-<meta property="og:description" content="前端小萌新 | 处女座 | 16岁少女">
+<meta property="og:description" content="懒加载的意义:  图片对页面加载的速度影响很大, 一张图片的大小可以达到几M, 而代码可能只有几十KB. 当页面图片很多时, 页面加载的速度缓慢, 这样就会失去很多用户.所以, 对于图片比较多的页面, 为了加快页面的加载速度, 很多时候可以将页面中未出现在可视区域的图片先不加载, 等滚动到可视区域后再去加载. 这样对于加载性能上会有很大的提升, 也提高了用户体验.  懒加载的原理:  将页面中的">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-04T10:40:54.391Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello, tudan~">
-<meta name="twitter:description" content="前端小萌新 | 处女座 | 16岁少女">
+<meta name="twitter:title" content="如何实现图片的懒加载">
+<meta name="twitter:description" content="懒加载的意义:  图片对页面加载的速度影响很大, 一张图片的大小可以达到几M, 而代码可能只有几十KB. 当页面图片很多时, 页面加载的速度缓慢, 这样就会失去很多用户.所以, 对于图片比较多的页面, 为了加快页面的加载速度, 很多时候可以将页面中未出现在可视区域的图片先不加载, 等滚动到可视区域后再去加载. 这样对于加载性能上会有很大的提升, 也提高了用户体验.  懒加载的原理:  将页面中的">
 
 
 
@@ -129,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/07/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/02/24/如何实现图片的懒加载/"/>
 
 
 
 
 
-  <title>归档 | Hello, tudan~</title>
+  <title>如何实现图片的懒加载 | Hello, tudan~</title>
   
 
 
@@ -159,7 +160,7 @@
     
   
 
-  <div class="container sidebar-position-right page-archive">
+  <div class="container sidebar-position-right page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -273,74 +274,155 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 10 篇日志。 继续努力。
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/24/如何实现图片的懒加载/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="tttudan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/tttudan.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello, tudan~">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/07/25/个人作品集/" itemprop="url">
-              
-                <span itemprop="name">个人作品集</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">如何实现图片的懒加载</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-25T00:22:06+08:00"
-              content="2017-07-25" >
-          07-25
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-24T09:48:00+08:00">
+                2018-02-24
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <ul>
+<li><p>懒加载的意义:<br>  图片对页面加载的速度影响很大, 一张图片的大小可以达到几M, 而代码可能只有几十KB. 当页面图片很多时, 页面加载的速度缓慢, 这样就会失去很多用户.所以, 对于图片比较多的页面, 为了加快页面的加载速度, 很多时候可以将页面中未出现在可视区域的图片先不加载, 等滚动到可视区域后再去加载. 这样对于加载性能上会有很大的提升, 也提高了用户体验.</p>
+</li>
+<li><p>懒加载的原理:<br>  将页面中的img标签src指向一张小图片或者src为空, 然后定义data-src(这个属性可以自定义命名)属性指向真实的图片. src指向一张默认的图片, 否则src为空时, 也会向服务器发送一次请求. 可以指向loading的地址.</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=&quot;test.jpg&quot; data-src=&quot;http://image-html5dw-com.b0.upaiyun.com/wp-upload/2017/11/banner%EF%BC%88800x200%EF%BC%89.jpg&quot; /&gt;</span><br></pre></td></tr></table></figure>
+<p>  当载入页面时, 先把可视区域内的img标签的data-src属性值负给src, 然后监听滚动事件, 把用户即将看到的图片加载, 这样便实现了懒加载.</p>
+</li>
+<li><p>懒加载的代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">    &lt;style&gt;</span><br><span class="line">        img &#123;</span><br><span class="line">            width: 800px;</span><br><span class="line">            height: 200px;</span><br><span class="line">            display: block;</span><br><span class="line">            margin-bottom: 70px;</span><br><span class="line">        &#125;</span><br><span class="line">    &lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;img src=&quot;test.jpg&quot; data-src=&quot;http://image-html5dw-com.b0.upaiyun.com/wp-upload/2017/11/banner%EF%BC%88800x200%EF%BC%89.jpg&quot; /&gt;</span><br><span class="line">    &lt;img src=&quot;test.jpg&quot; data-src=&quot;http://image-html5dw-com.b0.upaiyun.com/wp-upload/2017/11/banner%EF%BC%88800x200%EF%BC%89.jpg&quot; /&gt;</span><br><span class="line">    &lt;img src=&quot;test.jpg&quot; data-src=&quot;http://image-html5dw-com.b0.upaiyun.com/wp-upload/2017/11/banner%EF%BC%88800x200%EF%BC%89.jpg&quot; /&gt;</span><br><span class="line">    &lt;img src=&quot;test.jpg&quot; data-src=&quot;http://image-html5dw-com.b0.upaiyun.com/wp-upload/2017/11/banner%EF%BC%88800x200%EF%BC%89.jpg&quot; /&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">    var num = document.getElementsByTagName(&apos;img&apos;).length;</span><br><span class="line">    var img = document.getElementsByTagName(&quot;img&quot;);</span><br><span class="line">    var n = 0; //存储图片加载到的位置，避免每次都从第一张图片开始遍历</span><br><span class="line"></span><br><span class="line">    lazyload(); //页面载入完毕加载可是区域内的图片</span><br><span class="line"></span><br><span class="line">    window.onscroll = lazyload;</span><br><span class="line"></span><br><span class="line">    function lazyload() &#123; //监听页面滚动事件</span><br><span class="line">        var seeHeight = document.documentElement.clientHeight; //可见区域高度</span><br><span class="line">        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop; //滚动条距离顶部高度</span><br><span class="line">        for (var i = n; i &lt; num; i++) &#123;</span><br><span class="line">            if (img[i].offsetTop &lt; seeHeight + scrollTop) &#123;</span><br><span class="line">                if (img[i].getAttribute(&quot;src&quot;) == &quot;test.jpg&quot;) &#123;</span><br><span class="line">                    img[i].src = img[i].getAttribute(&quot;data-src&quot;);</span><br><span class="line">                &#125;</span><br><span class="line">                n = i + 1;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/28/前端开发中的单位-px-em-rem-vw/" rel="next" title="前端开发中的单位(px,em,rem,vw)">
+                <i class="fa fa-chevron-left"></i> 前端开发中的单位(px,em,rem,vw)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/01/28/移动端h5开发兼容性问题总结/" rel="prev" title="移动端h5开发兼容性问题总结">
+                移动端h5开发兼容性问题总结 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -348,6 +430,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -584,6 +670,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
