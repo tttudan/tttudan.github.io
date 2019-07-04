@@ -90,19 +90,19 @@
 
 
 
-<meta name="description" content="#小程序开发中踩过的坑 1.背景图片在小程序中使用background-image: url();设置背景图片会报错，可以使用网络图片，或者转换成base64编码，也可以用标签和定位实现。 2.路由跳转wx.switchTab(): 跳转到tarBar页面，底部导航栏之间的跳转只能用wx.switchTab();wx.reLaunch(): 打开某个页面，并关闭其他所有页面;wx.redirect">
+<meta name="description" content="#小程序开发中踩过的坑 1.背景图片在小程序中使用background-image: url();设置背景图片会报错，可以使用网络图片，或者转换成base64编码，也可以用image标签和定位实现。 2.路由跳转wx.switchTab(): 跳转到tarBar页面，底部导航栏之间的跳转只能用wx.switchTab();wx.reLaunch(): 打开某个页面，并关闭其他所有页面;wx.red">
 <meta name="keywords" content="小程序">
 <meta property="og:type" content="article">
 <meta property="og:title" content="小程序开发过程踩过的坑">
 <meta property="og:url" content="http://yoursite.com/2019/03/09/小程序开发过程踩过的坑/index.html">
 <meta property="og:site_name" content="Hello, tudan~">
-<meta property="og:description" content="#小程序开发中踩过的坑 1.背景图片在小程序中使用background-image: url();设置背景图片会报错，可以使用网络图片，或者转换成base64编码，也可以用标签和定位实现。 2.路由跳转wx.switchTab(): 跳转到tarBar页面，底部导航栏之间的跳转只能用wx.switchTab();wx.reLaunch(): 打开某个页面，并关闭其他所有页面;wx.redirect">
+<meta property="og:description" content="#小程序开发中踩过的坑 1.背景图片在小程序中使用background-image: url();设置背景图片会报错，可以使用网络图片，或者转换成base64编码，也可以用image标签和定位实现。 2.路由跳转wx.switchTab(): 跳转到tarBar页面，底部导航栏之间的跳转只能用wx.switchTab();wx.reLaunch(): 打开某个页面，并关闭其他所有页面;wx.red">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://yoursite.com/2019/03/09/小程序开发过程踩过的坑/xcx.png">
-<meta property="og:updated_time" content="2019-07-04T10:50:10.230Z">
+<meta property="og:updated_time" content="2019-07-04T11:13:28.221Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="小程序开发过程踩过的坑">
-<meta name="twitter:description" content="#小程序开发中踩过的坑 1.背景图片在小程序中使用background-image: url();设置背景图片会报错，可以使用网络图片，或者转换成base64编码，也可以用标签和定位实现。 2.路由跳转wx.switchTab(): 跳转到tarBar页面，底部导航栏之间的跳转只能用wx.switchTab();wx.reLaunch(): 打开某个页面，并关闭其他所有页面;wx.redirect">
+<meta name="twitter:description" content="#小程序开发中踩过的坑 1.背景图片在小程序中使用background-image: url();设置背景图片会报错，可以使用网络图片，或者转换成base64编码，也可以用image标签和定位实现。 2.路由跳转wx.switchTab(): 跳转到tarBar页面，底部导航栏之间的跳转只能用wx.switchTab();wx.reLaunch(): 打开某个页面，并关闭其他所有页面;wx.red">
 <meta name="twitter:image" content="http://yoursite.com/2019/03/09/小程序开发过程踩过的坑/xcx.png">
 
 
@@ -359,7 +359,7 @@
 
       
         <p>#小程序开发中踩过的坑</p>
-<p>1.背景图片<br>在小程序中使用background-image: url();设置背景图片会报错，<br><img src="/2019/03/09/小程序开发过程踩过的坑/xcx.png" alt="xcx"><br>可以使用网络图片，或者转换成base64编码，也可以用<image>标签和定位实现。</image></p>
+<p>1.背景图片<br>在小程序中使用background-image: url();设置背景图片会报错，<br><img src="/2019/03/09/小程序开发过程踩过的坑/xcx.png" alt="xcx"><br>可以使用网络图片，或者转换成base64编码，也可以用image标签和定位实现。</p>
 <p>2.路由跳转<br>wx.switchTab(): 跳转到tarBar页面，底部导航栏之间的跳转只能用wx.switchTab();<br>wx.reLaunch(): 打开某个页面，并关闭其他所有页面;<br>wx.redirectTo(): 关闭当前页面，跳转到应用内的某个页面;<br>wx.navigateTo(): 保留当前页，跳转到应用内的某个页面，一直入栈而不出栈会导致无法继续跳转（小程序中页面栈最多十层）;<br>wx.navigateBack(): 关闭当前页面，返回上一页面或多级页面。可通过 getCurrentPages 获取当前的页面栈，决定需要返回几层。delta大于现有页面数会返回到首页。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wx.navigateBack(&#123;</span><br><span class="line">    delta: 1,</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 <p>3.冒泡事件和非冒泡事件<br>冒泡事件: 当一个组件上的事件被触发后，该事件会向父节点传递。<br>非冒泡事件: 当一个组件上的事件被触发后，该事件不会向父节点传递。<br>bind事件绑定不会阻止冒泡事件向上冒泡，catch事件绑定可以阻止冒泡事件向上冒泡。</p>
 <p>4.scroll-view使用竖向滚动实现下拉加载时，需要设置一个固定高度，当height: 100%;时，不能触发下拉加载事件。<br>scroll-view高度不好定死时，可以通过获取系统信息设置高度。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;scroll-view scroll-y style=&quot;height:&#123;&#123;scrollHeight&#125;&#125;px;&quot; bindscrolltolower=&quot;searchScrollLower&quot;&gt;</span><br><span class="line">wx.getSystemInfo(&#123;</span><br><span class="line">  success: function (res) &#123;</span><br><span class="line">    that.setData(&#123;</span><br><span class="line">      scrollHeight: parseInt(res.windowHeight) + 200</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
